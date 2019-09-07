@@ -13,6 +13,11 @@ body {
     
 }
 
+#audio{
+    padding-left: 500px;
+    align-items: center;
+    
+}
 
 #black-crystal {
     width:300px;

@@ -31,6 +31,8 @@ function reset() {
     crystalNumbers = [getRandomCrystalNumber(), getRandomCrystalNumber(), getRandomCrystalNumber(), getRandomCrystalNumber()];
     computerChoice = Math.floor((Math.random() * 100) + 19);
     counter = 0;
+    score = 0;
+    $("score-text").text("your score is: 0" + counter);
     $("#number-to-win-text").text("number to win: " + computerChoice);
 }
 
@@ -41,12 +43,14 @@ $("#black-crystal").on("click", function () {
 
 
     if (counter === computerChoice) {
-        wins++; reset();
+        wins++;
+        reset();
         $("#wins-text").text("wins: " + wins);
     }
 
     if (counter > computerChoice) {
-        losses++; reset();
+        losses++;
+        reset();
         $("#losses-text").text("losses: " + losses);
     }
 
